@@ -1,2 +1,2 @@
-# Docs
-Detailed docs for Azure Identity troubleshooting
+# Azure Identity Docs
+Good to know docs for Azure Identity troubleshooting
