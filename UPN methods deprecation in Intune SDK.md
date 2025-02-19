@@ -59,4 +59,7 @@ PublicClientApplication.createMultipleAccountPublicClientApplication(
 
 Ref: https://javadoc.io/static/com.microsoft.identity.client/msal/2.2.3/com/microsoft/identity/client/IMultipleAccountPublicClientApplication.html#getAccount-java.lang.String-
 
+### Conclusion
 In conclusion, we would reiterate that developers should stop relying on UPNs for account identifiers are they are not suitable unique IDs. The MAM SDK has has switched to using the OID of the account as the unique identifier internally, so we can ensure that the correct MAM policies are used for a given account.
+
+### Review Credit
