@@ -1,2 +1,2 @@
-# Azure Identity Docs
-Good to know docs for Azure Identity troubleshooting
+# Microsoft Security Docs
+Good to know docs for MS Security products troubleshooting - Entra ID, Intune and Purview.
