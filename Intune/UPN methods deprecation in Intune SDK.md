@@ -11,7 +11,7 @@ New methods that specify identities by OID (also known as AAD User ID, AAD ID or
 However we understand there may be scenarios requiring fetching the UPN value for an account rather than the OID. Keeping this in mind, we have added below some guidance on how developers can fetch UPN value on both iOS and Android platforms.
 
 ## For iOS:
-1. In most cases, you can acquire the UPN value of the account using the [IntuneMAMEnrollmentDelegate](https://learn.microsoft.com/en-us/mem/intune/developer/app-sdk-ios-phase3#status-result-and-debug-notifications) which returns an IntuneMAMEnrollmentStatus object that contains the UPN.
+1. In most cases, you can acquire the UPN value of the account using the [IntuneMAMEnrollmentDelegate](https://learn.microsoft.com/en-us/mem/intune/developer/app-sdk-ios-phase3#status-result-and-debug-notifications) which returns an IntuneMAMEnrollmentStatus object that contains the UPN (status.identity).
 
 ```
 - (void)enrollmentRequestWithStatus:(IntuneMAMEnrollmentStatus*)status
