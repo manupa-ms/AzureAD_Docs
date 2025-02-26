@@ -20,8 +20,18 @@ However we understand there may be scenarios requiring fetching the UPN value fo
     NSLog(@"Debug Message: %@", status.errorString);
 }
 ```
-
-2. An alternative to the above approach, if yours is a scenario requiring fetching UPN value from the PCA object, you could leverage the following script using MSAL's tenantProfileIdentifier as shown below -
+2. Another option is to inspect the current state of the application during MSAL authenication and inspect the variable and objects in the current scope. Located below are the recommended object used:
+ ```
+       //Login the user through the Intune sign in flow. EnrollmentDelegateClass will handle the outcome of this.
+        let accountIdentifier = account.homeAccountId?.objectId ?? ""
+        print("Guid/Account OID:" + (accountIdentifier))
+        
+        IntuneMAMEnrollmentManager.instance().registerAndEnrollAccountId(accountIdentifier)
+        
+        
+    }
+```  
+3. An alternative to the above approach, if yours is a scenario requiring fetching UPN value from the PCA object, you could leverage the following script using MSAL's tenantProfileIdentifier as shown below -
 
 ```
 import MSAL
